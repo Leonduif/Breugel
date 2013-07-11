@@ -1,0 +1,62 @@
+header {
+	background: url("../gfx/header.jpg") no-repeat center;
+	height: 400px;
+	position: relative;
+	@media (max-width: $break-small) {
+		height: 200px;
+		background-position: 41% 58%;
+	}
+}
+
+nav {
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	background: rgba(0,0,0, 0.5);
+	width: 100%;
+	@media (max-width: $break-small) {
+		line-height: 2;
+		height: auto;
+	}
+}
+
+%base-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+	}
+}
+
+.mainNav {
+	@extend %base-nav;
+	li {
+		margin-right: 1px;
+	}
+	a {
+		color: #FFF;
+		text-decoration: none;	
+		padding: 6px 12px;
+
+	}
+	.active {
+		background: #0986D0;
+	}
+	@media (max-width: $break-small) {
+		margin: 10px 0 0 5px;
+	}
+}
+
+.subNav {
+	@extend %base-nav;
+	@media (max-width: $break-small) {
+		position: absolute;
+		width: 50%;
+		height: 30px;
+		background: red;
+		top: 100px;
+		right: 0;
+	}
+}

@@ -1,14 +1,15 @@
 // Vertical rhythm
-@include establish-baseline;
 $base-font-size: 16px;
 $base-line-height: 24px;
+@include establish-baseline;
+
 
 h1 {
     @include adjust-font-size-to(42px);
 }
 
 h2 {
-    @include adjust-font-size-to(24px);
+    @include adjust-font-size-to(26px);
 }
 
 h3 {
