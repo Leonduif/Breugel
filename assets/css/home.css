@@ -421,11 +421,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'MyriadProBold';
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   [class*='col-'], .center {
     width: 100% !important;
     float: none !important;
-    padding: 10px !important;
+    margin-bottom: 10px !important;
   }
 }
 
@@ -493,11 +493,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 header {
-  background: url("../gfx/header.jpg") no-repeat center;
-  height: 400px;
+  background: url("../gfx/header.jpg") no-repeat center 65%;
+  height: 500px;
   position: relative;
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   header {
     height: 200px;
     background-position: 41% 58%;
@@ -512,7 +512,7 @@ nav {
   background: rgba(0, 0, 0, 0.5);
   width: 100%;
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   nav {
     line-height: 2;
     height: auto;
@@ -528,6 +528,9 @@ nav {
   display: inline-block;
 }
 
+.mainNav {
+  font-size: 18px;
+}
 .mainNav li {
   margin-right: 1px;
 }
@@ -535,23 +538,62 @@ nav {
   color: #FFF;
   text-decoration: none;
   padding: 6px 12px;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.mainNav a:hover, .mainNav a:active {
+  background: #0986d0;
 }
 .mainNav .active {
-  background: #0986D0;
+  background: #0986d0;
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .mainNav {
     margin: 10px 0 0 5px;
+    font-size: 16px;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .subNav {
     position: absolute;
-    width: 50%;
-    height: 30px;
-    background: red;
-    top: 100px;
+    width: 90%;
     right: 0;
   }
+}
+.subNav li {
+  width: 40px;
+  height: 40px;
+  float: right;
+}
+.subNav a {
+  display: block;
+  height: inherit;
+}
+.subNav a[hreflang="en"] {
+  background: url("../gfx/icons/gb.png") no-repeat center center;
+}
+.subNav a[hreflang="nl"] {
+  background: url("../gfx/icons/nl.png") no-repeat center center;
+}
+.subNav a[hreflang="fr"] {
+  background: url("../gfx/icons/fr.png") no-repeat center center;
+}
+.subNav a[hreflang="de"] {
+  background: url("../gfx/icons/de.png") no-repeat center center;
+}
+.subNav .active {
+  position: relative;
+}
+.subNav .active:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 11px;
+  border-bottom: 2px solid #0986d0;
+  position: absolute;
+  top: 17px;
+  left: 10px;
 }

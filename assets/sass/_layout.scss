@@ -1,11 +1,11 @@
 $maxWidth: 80%;
-$break-small: 400px;
+$break-small: 600px;
 
 %mobile-col {
     @media (max-width: $break-small) {
         width: 100% !important;
         float: none !important;
-        padding: 10px !important;
+        margin-bottom: 10px !important;
     }
 }  
 

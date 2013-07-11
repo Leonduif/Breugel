@@ -1,6 +1,6 @@
 header {
-	background: url("../gfx/header.jpg") no-repeat center;
-	height: 400px;
+	background: url("../gfx/header.jpg") no-repeat center 65%;
+	height: 500px;
 	position: relative;
 	@media (max-width: $break-small) {
 		height: 200px;
@@ -32,6 +32,7 @@ nav {
 
 .mainNav {
 	@extend %base-nav;
+	font-size: 18px;
 	li {
 		margin-right: 1px;
 	}
@@ -39,13 +40,18 @@ nav {
 		color: #FFF;
 		text-decoration: none;	
 		padding: 6px 12px;
+		@include single-transition(all,0.3s,ease);
+		&:hover, &:active {
+			background: $lightBlue;
+		}
 
 	}
 	.active {
-		background: #0986D0;
+		background: $lightBlue;
 	}
 	@media (max-width: $break-small) {
 		margin: 10px 0 0 5px;
+		font-size: 16px;
 	}
 }
 
@@ -53,10 +59,41 @@ nav {
 	@extend %base-nav;
 	@media (max-width: $break-small) {
 		position: absolute;
-		width: 50%;
-		height: 30px;
-		background: red;
-		top: 100px;
+		width: 90%;
 		right: 0;
+	}
+	li {
+		width: 40px;
+		height: 40px;
+		float: right;
+	}
+	a {
+		display: block;
+		height: inherit;
+		&[hreflang="en"] {
+			background: url("../gfx/icons/gb.png") no-repeat center center;
+		}
+		&[hreflang="nl"] {
+			background: url("../gfx/icons/nl.png") no-repeat center center;
+		}
+		&[hreflang="fr"] {
+			background: url("../gfx/icons/fr.png") no-repeat center center;
+		}
+		&[hreflang="de"] {
+			background: url("../gfx/icons/de.png") no-repeat center center;
+		}
+	}
+	.active {
+		position: relative;
+		&:after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 11px;
+			border-bottom: 2px solid $lightBlue;
+			position: absolute;
+			top: 17px;
+			left: 10px;
+		}
 	}
 }

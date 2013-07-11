@@ -1,4 +1,4 @@
-DirectoryIndex views/nl/index.php
+DirectoryIndex views/nl/home/home.php
 # Apache Configuration File
 
 # (!) Using `.htaccess` files slows down Apache, therefore, if you have access
