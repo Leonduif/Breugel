@@ -421,7 +421,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'MyriadProBold';
 }
 
-@media (max-width: 600px) {
+p {
+  color: #818181;
+}
+
+@media (max-width: 800px) {
   [class*='col-'], .center {
     width: 100% !important;
     float: none !important;
@@ -449,10 +453,25 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px 0;
 }
 .row:after {
-  /* Or @extend clearfix */
   content: "";
   display: table;
   clear: both;
+}
+@media (max-width: 600px) {
+  .row {
+    padding: 15px;
+  }
+}
+@media (min-width: 800px) {
+  .row {
+    margin: 0 0 40px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  footer .center {
+    padding: 15px;
+  }
 }
 
 [class*='col-'] {
@@ -461,6 +480,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .row [class*='col-']:last-of-type {
   padding-right: 0;
+}
+@media (min-width: 800px) {
+  [class*='col-'] {
+    padding-right: 40px;
+  }
 }
 
 .col-1-8 {
@@ -494,13 +518,13 @@ h1, h2, h3, h4, h5, h6 {
 
 header {
   background: url("../gfx/header.jpg") no-repeat center 65%;
-  height: 500px;
+  height: 400px;
   position: relative;
 }
 @media (max-width: 600px) {
   header {
     height: 200px;
-    background-position: 41% 58%;
+    background-position: center 40%;
   }
 }
 
@@ -509,7 +533,8 @@ nav {
   bottom: 0;
   height: 50px;
   line-height: 50px;
-  background: rgba(0, 0, 0, 0.5);
+  background: #252525;
+  background: rgba(0, 0, 0, 0.7);
   width: 100%;
 }
 @media (max-width: 600px) {
@@ -544,10 +569,10 @@ nav {
   transition: all 0.3s ease;
 }
 .mainNav a:hover, .mainNav a:active {
-  background: #0986d0;
+  background: #01aef0;
 }
 .mainNav .active {
-  background: #0986d0;
+  background: #01aef0;
 }
 @media (max-width: 600px) {
   .mainNav {
@@ -555,14 +580,12 @@ nav {
     font-size: 16px;
   }
 }
-
-@media (max-width: 600px) {
-  .subNav {
-    position: absolute;
-    width: 90%;
-    right: 0;
+@media (min-width: 800px) {
+  .mainNav {
+    float: left;
   }
 }
+
 .subNav li {
   width: 40px;
   height: 40px;
@@ -571,6 +594,7 @@ nav {
 .subNav a {
   display: block;
   height: inherit;
+  position: relative;
 }
 .subNav a[hreflang="en"] {
   background: url("../gfx/icons/gb.png") no-repeat center center;
@@ -584,16 +608,78 @@ nav {
 .subNav a[hreflang="de"] {
   background: url("../gfx/icons/de.png") no-repeat center center;
 }
-.subNav .active {
-  position: relative;
+.subNav a:hover:after, .subNav a:active:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 11px;
+  border-bottom: 2px solid #01aef0;
+  position: absolute;
+  top: 17px;
+  left: 10px;
 }
 .subNav .active:after {
   content: "";
   display: block;
   width: 20px;
   height: 11px;
-  border-bottom: 2px solid #0986d0;
+  border-bottom: 2px solid #01aef0;
   position: absolute;
   top: 17px;
   left: 10px;
+}
+@media (max-width: 600px) {
+  .subNav {
+    position: absolute;
+    width: 90%;
+    right: 0;
+  }
+}
+@media (max-width: 660px) {
+  .subNav {
+    top: 80px;
+  }
+}
+@media (min-width: 800px) {
+  .subNav {
+    float: right;
+    margin: 5px -10px 0 0;
+  }
+}
+
+footer {
+  background: #CCC;
+}
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+footer .center:after {
+  content: "";
+  display: table;
+  clear: both;
+  *zoom: 1;
+}
+
+@media (max-width: 800px) {
+  .home h1 {
+    margin-top: 10px;
+  }
+}
+.home h2 {
+  margin-top: -10px;
+  line-height: 1.5;
+  color: #868686;
+}
+.home ul {
+  list-style: none;
+  padding: 15px 0 15px 40px;
+  border-top: 1px solid #CCC;
+  border-bottom: 1px solid #CCC;
+}
+.home li {
+  line-height: 1.8;
+}
+.home img {
+  width: 100%;
 }

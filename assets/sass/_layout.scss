@@ -1,8 +1,15 @@
 $maxWidth: 80%;
+
 $break-small: 600px;
+$break-medium: 800px;
+
+$gutter-small: 20px;
+$gutter-medium: 40px;
+
+$padding-small: 15px;
 
 %mobile-col {
-    @media (max-width: $break-small) {
+    @media (max-width: $break-medium) {
         width: 100% !important;
         float: none !important;
         margin-bottom: 10px !important;
@@ -23,25 +30,38 @@ $break-small: 600px;
     margin: 0 auto;
 }
 
-// Grid
-$pad: 20px;
-
 .row {
-  margin: 0 0 $pad 0;
-  &:after {
-    /* Or @extend clearfix */
-    content: "";
-    display: table;
-    clear: both;
-  }
+    margin: 0 0 $gutter-small 0;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    @media (max-width: $break-small) {
+        padding: $padding-small;
+    }
+    @media (min-width: $break-medium) {
+        margin: 0 0 $gutter-medium 0;
+    }
+}
+
+footer {
+    .center {
+        @media (max-width: $break-small) {
+            padding: $padding-small;
+        }
+    }
 }
 
 [class*='col-'] {
     float: left;
-    padding-right: $pad;
+    padding-right: $gutter-small;
     @extend %mobile-col;
     .row &:last-of-type {
         padding-right: 0;
+    }
+    @media (min-width: $break-medium) {
+        padding-right: $gutter-medium;
     }
 }
 .col-1-8 {

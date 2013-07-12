@@ -1,0 +1,13 @@
+footer {
+	background: #CCC;
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	.center:after {
+	    content: "";
+	    display: table;
+	    clear: both; 
+		*zoom: 1
+;	}
+}
