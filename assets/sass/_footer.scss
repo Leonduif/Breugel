@@ -1,8 +1,12 @@
 footer {
-	background: #CCC;
+	background: $lightGrey;
 	ul {
 		list-style: none;
 		padding: 0;
+	}
+	a {
+		text-decoration: none;
+		color: $lightBlue;
 	}
 	.center:after {
 	    content: "";

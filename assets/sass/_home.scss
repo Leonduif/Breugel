@@ -1,7 +1,15 @@
 .home {
 	@media (max-width: $break-medium) {
-		h1 {
+		h1, img {
 			margin-top: 10px;
+		}
+	}
+	@media (max-width: $break-small) {
+		h1 {
+			margin-top: 13px;
+		}
+		.row {
+			position: relative;
 		}
 	}
 	h2 {
@@ -11,14 +19,18 @@
 	}
 	ul {
 		list-style: none;
-		padding: 15px 0 15px 40px;
+		padding: 15px 0;
 		border-top: 1px solid #CCC;
 		border-bottom: 1px solid #CCC;
+		margin: 25px 0;
 	}
 	li {
 		line-height: 1.8;
+		background: url("../gfx/icons/check-small.png") no-repeat left top;
+		padding-left: 40px;
 	}
 	img {
 		width: 100%;
+		height: auto;
 	}
 }

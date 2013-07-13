@@ -1,4 +1,4 @@
-$maxWidth: 80%;
+$maxWidth: 90%;
 
 $break-small: 600px;
 $break-medium: 800px;
@@ -27,6 +27,7 @@ $padding-small: 15px;
 
 .center {
     width: $maxWidth;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -37,7 +38,7 @@ $padding-small: 15px;
         display: table;
         clear: both;
     }
-    @media (max-width: $break-small) {
+    @media (max-width: $break-medium) {
         padding: $padding-small;
     }
     @media (min-width: $break-medium) {
@@ -49,6 +50,7 @@ footer {
     .center {
         @media (max-width: $break-small) {
             padding: $padding-small;
+            margin-bottom: 0 !important;
         }
     }
 }

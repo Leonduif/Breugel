@@ -1,0 +1,17 @@
+%base-btn {
+	padding: 5px 10px;
+	color: white;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.btn-blue {
+	@extend %base-btn;
+	background: $lightBlue;
+	@include background-image(linear-gradient(top, $lightBlue, $darkBlue));
+	border: 1px solid $darkBlue;
+	&:hover, &:active {
+		background: lighten($lightBlue, 5%);
+		@include background-image(linear-gradient(top, lighten($lightBlue, 5%), lighten($darkBlue, 5%)));
+	}
+}
