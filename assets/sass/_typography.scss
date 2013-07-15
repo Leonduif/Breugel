@@ -1,7 +1,8 @@
 // Vertical rhythm
-@include establish-baseline;
 $base-font-size: 16px;
 $base-line-height: 24px;
+@include establish-baseline;
+
 
 h1 {
     @include adjust-font-size-to(42px);
@@ -19,16 +20,7 @@ h4 {
     @include adjust-font-size-to(18px);
 }
 
-.last {
-    @include trailer();
-    @include trailing-border();
-}
-
-.first, h1 {
-    @include leader();
-}
-
-// Font famliy
+// Font family
 @font-face {
     font-family: 'MyriadProRegular';
     src: url('fonts/myriadpro-regular.eot');
@@ -55,6 +47,10 @@ html, body {
     font-family: 'MyriadProRegular';
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
     font-family: 'MyriadProBold';
+}
+
+p {
+    color: $black;
 }

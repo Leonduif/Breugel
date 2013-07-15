@@ -1,0 +1,121 @@
+header {
+	background: url("../gfx/header.jpg") no-repeat center 65%;
+	height: 400px;
+	position: relative;
+	@media (max-width: $break-small) {
+		height: 200px;
+		background-position: center 40%;
+	}
+}
+
+nav {
+	position: absolute;
+	bottom: 0;
+	height: 50px;
+	line-height: 50px;
+	background: $darkGrey;
+	background: rgba(0,0,0, 0.7);
+	width: 100%;
+	@media (max-width: $break-small) {
+		line-height: 2;
+		height: auto;
+	}
+}
+
+%base-nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+	}
+}
+
+.mainNav {
+	@extend %base-nav;
+	li {
+		margin-right: 1px;
+	}
+	a {
+		color: #FFF;
+		text-decoration: none;
+		padding: 7px 12px;
+		height: 30px;
+		font-family: 'Helvetica';
+		@include single-transition(all,0.3s,ease);
+		&:hover, &:active {
+			background: $lightBlue;
+		}
+
+	}
+	.active {
+		background: $lightBlue;
+	}
+	@media (max-width: $break-small) {
+		margin: 10px 0 0 5px;
+		font-size: 16px;
+	}
+	@media (min-width: $break-medium) {
+		float: left;
+	}
+	@media (min-width: $break-small) and (max-width: $break-medium) {
+		margin-left: 10px;
+	}
+}
+
+.subNav {
+	@extend %base-nav;
+	li {
+		width: 40px;
+		height: 40px;
+		float: right;
+	}
+	a {
+		display: block;
+		height: inherit;
+		position: relative;
+		&[hreflang="en"] {
+			background: url("../gfx/icons/gb.png") no-repeat center center;
+		}
+		&[hreflang="nl"] {
+			background: url("../gfx/icons/nl.png") no-repeat center center;
+		}
+		&[hreflang="fr"] {
+			background: url("../gfx/icons/fr.png") no-repeat center center;
+		}
+		&[hreflang="de"] {
+			background: url("../gfx/icons/de.png") no-repeat center center;
+		}
+		&:hover:after, &:active:after {
+			content: "";
+			display: block;
+			width: 20px;
+			height: 11px;
+			border-bottom: 2px solid $lightBlue;
+			position: absolute;
+			top: 17px;
+			left: 10px;
+		}
+	}
+	.active:after {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 11px;
+		border-bottom: 2px solid $lightBlue;
+		position: absolute;
+		top: 17px;
+		left: 10px;
+	}
+	@media (max-width: $break-small) {
+		position: absolute;
+		width: 90%;
+		right: 0;
+		z-index: 1;
+	}
+	@media (min-width: $break-medium) {
+		float: right;
+		margin: 5px -10px 0 0;
+		top: 60px;
+	}
+}
