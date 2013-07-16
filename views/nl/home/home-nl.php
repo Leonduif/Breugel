@@ -17,7 +17,7 @@
 			<a class="btn-blue" href="/contact">Check beschikbaarheid</a>
 		</div>
 		<div class="col-1-2">
-			<img src="/assets/gfx/home.jpg" alt="Vooraanzicht vakantiehuis">
+			<img src="/assets/gfx/home.jpg" alt="">
 		</div>
 	</div>
 </div>

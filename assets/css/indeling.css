@@ -569,10 +569,10 @@ nav {
   padding: 7px 12px;
   height: 30px;
   font-family: 'Helvetica';
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 .mainNav a:hover, .mainNav a:active {
   background: #01aef0;

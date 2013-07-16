@@ -1,5 +1,7 @@
 <?php
 	session_start();
+	$language = "nl";
+
 	// Stel standaard taal in (indien deze nog niet is ingesteld)
 	if(isset($_SESSION['language']) === false)
 	{
@@ -14,5 +16,33 @@
 	    {
 	        $_SESSION['language'] = $language;
 	    }
+	}
+
+	// Navigation names
+	$home = array('nl' => 'Home',
+				  'en' => 'Home',
+				  'fr' => 'La home!',
+				  'de' => 'Hause');
+
+	switch ($language) {
+		case 'nl':
+			$navHome = $home['nl'];
+			break;
+
+		case 'en':
+			$navHome = $home['en'];
+			break;
+
+		case 'fr':
+			$navHome = $home['fr'];
+			break;
+
+		case 'de':
+			$navHome = $home['de'];
+			break;
+		
+		default:
+			$navHome = $home['nl'];
+			break;
 	}
 ?>

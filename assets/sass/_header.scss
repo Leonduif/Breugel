@@ -42,7 +42,7 @@ nav {
 		padding: 7px 12px;
 		height: 30px;
 		font-family: 'Helvetica';
-		@include single-transition(all,0.3s,ease);
+		@include single-transition(background-color, 0.3s ,ease);
 		&:hover, &:active {
 			background: $lightBlue;
 		}
