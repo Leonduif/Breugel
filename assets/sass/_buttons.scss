@@ -1,10 +1,9 @@
 %base-btn {
-	font-family: 'Helvetica';
 	padding: 5px 10px;
 	color: white;
 	font-size: 16px;
 	text-decoration: none;
-	@include box-shadow(#B3B3B3 0px 4px 2px -2px);
+	@include box-shadow(#919191 0px 4px 2px -2px);
 }
 
 .btn-blue {

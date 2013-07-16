@@ -33,15 +33,14 @@ nav {
 
 .mainNav {
 	@extend %base-nav;
+	font-size: 18px;
 	li {
 		margin-right: 1px;
 	}
 	a {
 		color: #FFF;
-		text-decoration: none;
-		padding: 7px 12px;
-		height: 30px;
-		font-family: 'Helvetica';
+		text-decoration: none;	
+		padding: 6px 12px;
 		@include single-transition(all,0.3s,ease);
 		&:hover, &:active {
 			background: $lightBlue;
@@ -57,9 +56,6 @@ nav {
 	}
 	@media (min-width: $break-medium) {
 		float: left;
-	}
-	@media (min-width: $break-small) and (max-width: $break-medium) {
-		margin-left: 10px;
 	}
 }
 

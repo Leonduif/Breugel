@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-    @include adjust-font-size-to(24px);
+    @include adjust-font-size-to(26px);
 }
 
 h3 {
@@ -20,7 +20,7 @@ h4 {
     @include adjust-font-size-to(18px);
 }
 
-// Font family
+// Font famliy
 @font-face {
     font-family: 'MyriadProRegular';
     src: url('fonts/myriadpro-regular.eot');
@@ -47,7 +47,7 @@ html, body {
     font-family: 'MyriadProRegular';
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'MyriadProBold';
 }
 

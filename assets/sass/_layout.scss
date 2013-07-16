@@ -48,7 +48,7 @@ $padding-small: 15px;
 
 footer {
     .center {
-        @media (max-width: $break-medium) {
+        @media (max-width: $break-small) {
             padding: $padding-small;
             margin-bottom: 0 !important;
         }
@@ -59,7 +59,7 @@ footer {
     float: left;
     padding-right: $gutter-small;
     @extend %mobile-col;
-    .row &:last-of-type, &:last-of-type {
+    .row &:last-of-type {
         padding-right: 0;
     }
     @media (min-width: $break-medium) {
@@ -89,9 +89,4 @@ footer {
     width: $maxWidth;
     margin: 0 auto;
     @extend %mobile-col;
-}
-
-img {
-    width: 100%;
-    height: auto;
 }

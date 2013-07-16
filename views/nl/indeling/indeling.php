@@ -1,1 +1,1 @@
-<?php include($_SERVER['DOCUMENT_ROOT'] . "/index.php"); ?>
+<h1>indeling!</h1>
